@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Bolsonarinho</title>
+
+    <style>
+        body {
+            background-image: url(brasilia.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 6px 9px black;
+            font-style: italic;
+        }
+
+        #mainImage {
+            max-width: 550px;
+            width: 100%;
+            height: auto;
+            transition: 0.3s;
+        }
+
+        #btnImage {
+            width: 200px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #btnImage:hover {
+            transform: scale(1.1);
+        }
+
+        #btnImage:active {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Meu BOLSONARINHO Virtual</h1>
+
+        <img
+            id="mainImage"
+            src="BOLSONARO.png"
+            alt="Pet"
+        />
+
+        <img
+            id="btnImage"
+            src="PASTEL.png"
+            alt="Alimentar"
+            onclick="alimentar()"
+        />
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
