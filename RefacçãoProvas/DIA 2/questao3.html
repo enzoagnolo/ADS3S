@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ATIVIDADE 3 - DIA 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Grupos e Fatos da Copa</h1>
+
+    <div class="container">
+        <div id="grupoA" class="card">
+            <h2>Grupo A</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>O jogo de abertura será México x África do Sul.</p>
+                <p>Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.</p>
+            </details>
+        </div>
+
+        <div id="grupoB" class="card">
+            <h2>Grupo B</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Vaga Europeia (Bósnia)</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>O Canadá joga em casa, fator importante de desempenho.</p>
+                <p>Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.</p>
+            </details>
+        </div>
+
+        <div id="grupoC" class="card">
+            <h2>Grupo C</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>Brasil, Marrocos e Escócia já dividiram grupo em 1998.</p>
+                <p>Brasil nunca perdeu para a Escócia em Copas.</p>
+            </details>
+        </div>
+    </div>
+
+    <button onclick="proximoGrupo()" id="btnProximo">Próximo</button>
+
+    <script>
+        let alternado = false;
+
+        function proximoGrupo() {
+            const container = document.querySelector(".container");
+
+            if (!alternado) {
+                
+                container.innerHTML = `
+                <div class="card">
+                    <h2> Grupo D</h2>
+                    <h3>Seleções</h3>
+                    <ul>
+                        <li>Estados Unidos</li>
+                        <li>Paraguai</li>
+                        <li>Austrália</li>
+                        <li>Turquia</li>
+                    </ul>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Os EUA jogam em casa, vantagem histórica em Copas.</p>
+                        <p>Austrália enfrenta frequentemente seleções sul-americanas.</p>
+                    </details>
+                </div>
+
+                <div class="card">
+                    <h2> Grupo E</h2>
+                    <h3>Seleções</h3>
+                    <ul>
+                        <li>Alemanha</li>
+                        <li>Equador</li>
+                        <li>Costa do Marfim</li>
+                        <li>Curaçao</li>
+                    </ul>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Alemanha costuma dominar fases de grupos.</p>
+                        <p>Equador e Costa do Marfim têm estilos físicos semelhantes.</p>
+                    </details>
+                </div>
+
+                <div class="card">
+                    <h2> Grupo F</h2>
+                    <h3>Seleções</h3>
+                    <ul>
+                        <li>Holanda</li>
+                        <li>Japão</li>
+                        <li>Tunísia</li>
+                        <li>Suécia</li>
+                    </ul>
+                    <details>
+                        <summary>Saiba Mais</summary>
+                        <p>Grupo com seleções tradicionais e muito equilibradas.</p>
+                    </details>
+                </div>`;
+
+                alternado = true;
+                
+                document.getElementById("btnProximo").innerText = "Voltar";
+            } else {
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+</html>
